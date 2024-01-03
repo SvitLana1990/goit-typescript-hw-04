@@ -1,11 +1,11 @@
 import { useEffect, useRef, ReactElement } from "react";
 
-type Props = {
+type ObserverProps = {
   children: ReactElement;
   onContentEndVisible: () => void;
 };
 
-export function Observer({ children, onContentEndVisible }: Props) {
+export function Observer({ children, onContentEndVisible }: ObserverProps) {
   const endContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
